@@ -82,7 +82,6 @@ int main()
 
     int i;
     char postfix[POSTFIXSIZE];
-    printf("ASSUMPTION: There are only four operators(*, /, +, -) in an expression and operand is single digit only.\n");
     printf(" \nEnter postfix expression,\npress right parenthesis ')' for end expression : ");
 
     for (i = 0; i <= POSTFIXSIZE - 1; i++) {
