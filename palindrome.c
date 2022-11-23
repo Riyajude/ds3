@@ -56,7 +56,7 @@ void main()
 
             {
 
-                if (stack[top] == stack[front])
+                if (tolower(stack[top]) == tolower(stack[front]))
 
                 {
 
