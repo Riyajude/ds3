@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <math.h>
 
 #define MAXSTACK 100 
 #define POSTFIXSIZE 100 
@@ -47,12 +48,15 @@ void EvalPostfix(char postfix[])
         if (isdigit(ch)) {
             push(ch - '0');
         }
-        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/'||ch=='^') {
             A = pop();
             B = pop();
 
             switch (ch) 
             {
+            case '^':
+                val= pow(B,A);
+                break;
             case '*':
                 val = B * A;
                 break;
@@ -97,4 +101,3 @@ int main()
 
     return 0;
 }
-
